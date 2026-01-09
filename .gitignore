@@ -1,0 +1,52 @@
+# ========================
+# Gradle
+# ========================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ========================
+# IDE
+# ========================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*~
+
+# ========================
+# Java
+# ========================
+*.class
+*.jar
+*.war
+*.ear
+!gradle/wrapper/gradle-wrapper.jar
+
+# ========================
+# Build outputs
+# ========================
+bin/
+out/
+target/
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# Secrets (never commit!)
+# ========================
+*.env
+.env.local
+application-local.properties

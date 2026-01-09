@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка сервера</title>
+</head>
+<body>
+    <h1>500 - Ошибка сервера</h1>
+    <p th:text="${error}">Произошла ошибка</p>
+    <a th:href="@{/books}">Вернуться к списку книг</a>
+</body>
+</html>

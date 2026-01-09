@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница не найдена</title>
+</head>
+<body>
+    <h1>404 - Не найдено</h1>
+    <p th:text="${error}">Книга не найдена</p>
+    <a th:href="@{/books}">Вернуться к списку книг</a>
+</body>
+</html>
