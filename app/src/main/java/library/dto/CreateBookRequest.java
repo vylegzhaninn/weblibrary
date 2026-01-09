@@ -1,45 +1,24 @@
-package library.model;
+package library.dto;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDateTime;
-
-@Entity
-@Table(name = "books")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "name", nullable = false)
+public class CreateBookRequest {
+    
     @NotBlank(message = "Название не должно быть пустым")
     @Size(max = 255, message = "Название не должно быть длиннее 255 символов")
     private String name;
-
-    @Column(name = "author", nullable = false)
+    
     @NotBlank(message = "Автор не должен быть пустым")
     @Size(max = 255, message = "Имя автора не должно быть длиннее 255 символов")
     private String author;
-
-    @Column(name = "description", length = 1000)
+    
     @Size(max = 1000, message = "Описание не должно быть длиннее 1000 символов")
     private String description;
-
-    @CreationTimestamp
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private LocalDateTime createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at", nullable = false)
-    private LocalDateTime updatedAt;
 }
